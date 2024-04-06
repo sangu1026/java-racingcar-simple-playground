@@ -32,4 +32,20 @@ public class carRaceTest {
         Assertions.assertThat(next_location).isEqualTo(current_location + 1);
 
     }
+
+    @ParameterizedTest
+    @ValueSource(ints={1,3})
+    @DisplayName("random 값이 3 이하의 값이면 멈춘다")
+    void carStop(int randomNum){
+        //given
+        Car car = new Car();
+        int current_location = car.getCurrent_location();
+
+        //when
+        int next_location=car.check_randNum(randomNum,car);
+
+        //then
+        Assertions.assertThat(next_location).isEqualTo(current_location);
+
+    }
 }

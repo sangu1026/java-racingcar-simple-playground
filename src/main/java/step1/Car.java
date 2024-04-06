@@ -9,9 +9,9 @@ public class Car {
 
 
     public Car(){}
-    public Car(int current_location) {
+    public Car(int location) {
         this.car_num = next_car_num++;
-        this.location = current_location;
+        this.location = location;
     }
 
     public int getCar_num() {
