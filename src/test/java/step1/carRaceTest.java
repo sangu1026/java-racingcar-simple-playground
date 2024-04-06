@@ -17,5 +17,19 @@ public class carRaceTest {
 
         assertThat(randNum).isBetween(0,9);
     }
+    @ParameterizedTest
+    @ValueSource(ints={4,9})
+    @DisplayName("random 값이 4 이상일 경우 전진")
+    void carMoveForward(int randomNum){
+        //given
+        Car car = new Car(0);
+        int current_location = car.getCurrent_location();
 
+        //when
+        int next_location=car.check_randNum(randomNum,car);
+
+        //then
+        Assertions.assertThat(next_location).isEqualTo(current_location + 1);
+
+    }
 }
