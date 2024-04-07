@@ -31,19 +31,10 @@ public class RacingGame {
         moveCars();
     }
 
-    public void testRace(int[] script){
-        this.tryNo--;
-        testMoveCars(script);
-    }
 
     private void moveCars() {
         for (Car car : cars) {
             car.forwardCar(RandomNumGenerator.getRandomNum());
-        }
-    }
-    private void testMoveCars(int[] script) {
-        for(int i=0;i<cars.size();i++){
-            cars.get(i).forwardCar(script[i]);
         }
     }
 
