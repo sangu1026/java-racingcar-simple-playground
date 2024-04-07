@@ -1,6 +1,6 @@
-package step2.controller;
+package step3.controller;
 
-import step2.domain.*;
+import step3.domain.*;
 
 
 import java.util.ArrayList;

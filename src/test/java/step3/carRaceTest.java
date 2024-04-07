@@ -1,14 +1,14 @@
-package step2;
+package step3;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import step2.controller.RacingGame;
-import step2.domain.Car;
-import step2.domain.Winners;
-import step2.domain.RandomNumGenerator;
+import step3.controller.RacingGame;
+import step3.domain.Car;
+import step3.domain.Winners;
+import step3.domain.RandomNumGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
