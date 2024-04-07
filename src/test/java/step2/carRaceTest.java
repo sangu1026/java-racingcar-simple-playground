@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import step2.controller.RacingGame;
 import step2.domain.Car;
 import step2.domain.Winners;
-import step2.domain.randomNumGenerator;
+import step2.domain.RandomNumGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class carRaceTest {
     @Test
     @DisplayName("random 값은 0에서 9사이에 값이 반환된다")
     void randNumIsBetweenZeroAndNine(){
-        int randomNum = randomNumGenerator.getRandomNum();
+        int randomNum = RandomNumGenerator.getRandomNum();
 
         assertThat(randomNum).isBetween(0,9);
     }

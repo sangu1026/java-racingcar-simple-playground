@@ -2,7 +2,7 @@ package step2.domain;
 
 import java.util.Random;
 
-public class randomNumGenerator {
+public class RandomNumGenerator {
     private static final int MAX_BOUND = 10;
     public static int getRandomNum() {
         Random random = new Random();

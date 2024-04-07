@@ -38,7 +38,7 @@ public class RacingGame {
 
     private void moveCars() {
         for (Car car : cars) {
-            car.forwardCar(randomNumGenerator.getRandomNum());
+            car.forwardCar(RandomNumGenerator.getRandomNum());
         }
     }
     private void testMoveCars(int[] script) {
