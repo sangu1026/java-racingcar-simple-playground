@@ -5,14 +5,14 @@ package step2.domain;
 public class Car {
     private static final int FORWARD_NUM = 4;
 
-    private final String name;
+    private final CarName carName;
     private int position =0;
-    public Car(String name) {
-        this.name = name.trim();
+    public Car(String name) throws IllegalArgumentException{
+        carName= new CarName(name);
     }
 
     public Car(String name, int position) {
-        this.name = name.trim();
+        carName= new CarName(name);
         this.position = position;
     }
 
@@ -26,7 +26,7 @@ public class Car {
     }
 
     public String getName() {
-        return name;
+        return carName.name();
     }
 
     public int getPosition() {
