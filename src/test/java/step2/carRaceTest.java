@@ -43,6 +43,24 @@ public class carRaceTest {
 
         Assertions.assertThat(winnersName).contains("brown");
     }
+    @ParameterizedTest
+    @DisplayName("여러명의 우승:정해진 대본으로 test시 brie와 brown의 우승")
+    @CsvSource({"'neo,brie,brown',5"})
+    public void raceCarTest2(String name,int tryNum){
+        RacingGame racingGame= new RacingGame(name,tryNum);
 
+        int[][] script={{1,9,9},{1,9,9},{1,9,9},{1,9,9},{1,9,9}};
+        int cnt=0;
+        while(racingGame.racing()){
+            racingGame.testRace(script[cnt++]);
+        }
+        List<Car> winners = Winners.findWinners(racingGame.getCars());
+        List<String> winnersName = new ArrayList<>();
+
+        for(Car winner: winners){
+            winnersName.add(winner.getName());
+        }
+        Assertions.assertThat(winnersName).contains("brie","brown");
+    }
 
 }
