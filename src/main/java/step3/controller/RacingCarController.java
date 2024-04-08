@@ -13,20 +13,13 @@ public class RacingCarController {
     private final RacingGame racingGame;
 
 
-    public RacingCarController(){
-        String carNames=InputView.getCarNames();
-        int tryNo=InputView.getRaceCount();
+    public RacingCarController(String carNames,int tryNo){
         this.racingGame = new RacingGame(carNames, tryNo);
     }
 
     public void startRace(){
         OutputView.printRaceStartMessage();
         processRace();
-    }
-
-    public void showWinner(){
-        List<String> winners = Winners.findWinners(racingGame.getCars());
-        OutputView.printRaceWinner(winners);
     }
 
 
@@ -37,10 +30,11 @@ public class RacingCarController {
         }
     }
 
-
     private  void showRaceScore(List<Car> cars){
         OutputView.printRaceScore(cars);
     }
 
-
+    public List<String> getWinners(){
+        return Winners.findWinners(racingGame.getCars());
+    }
 }
