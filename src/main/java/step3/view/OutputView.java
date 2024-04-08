@@ -1,5 +1,7 @@
 package step3.view;
 
+import step3.domain.Car;
+
 import java.util.List;
 
 public class OutputView {
@@ -8,9 +10,9 @@ public class OutputView {
         System.out.println("\n실행 결과");
     }
 
-    public static void printRaceScore(List<String> carNames, List<Integer> carScores) {
-        for (int i = 0; i < carNames.size(); i++) {
-            System.out.println(carNames.get(i) + " : " + "-".repeat(carScores.get(i)));
+    public static void printRaceScore(List<Car> cars) {
+        for(Car car: cars){
+            System.out.println(car.getName()+" : "+"-".repeat(car.getPosition()));
         }
         System.out.println();
     }
