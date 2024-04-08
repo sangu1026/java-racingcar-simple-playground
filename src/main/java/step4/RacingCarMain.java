@@ -1,8 +1,8 @@
-package step3;
+package step4;
 
-import step3.controller.RacingCarController;
-import step3.view.InputView;
-import step3.view.OutputView;
+import step4.controller.RacingCarController;
+import step4.view.InputView;
+import step4.view.OutputView;
 
 public class RacingCarMain {
     public static void main(String[] args) {

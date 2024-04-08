@@ -1,4 +1,4 @@
-package step3.domain;
+package step4.domain;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -11,10 +11,7 @@ public class Car {
         carName= new CarName(name);
     }
 
-    public Car(String name, int position) {
-        carName= new CarName(name);
-        this.position = position;
-    }
+
 
     public void forwardCar(int randomNum) {
         if (randomNum >= FORWARD_NUM)

@@ -1,10 +1,9 @@
-package step3.controller;
+package step4.controller;
 
-import step3.domain.Car;
-import step3.domain.RacingGame;
-import step3.domain.Winners;
-import step3.view.InputView;
-import step3.view.OutputView;
+import step4.domain.Car;
+import step4.domain.RacingGame;
+import step4.domain.Winners;
+import step4.view.OutputView;
 
 import java.util.List;
 
@@ -36,5 +35,9 @@ public class RacingCarController {
 
     public List<String> getWinners(){
         return Winners.findWinners(racingGame.getCars());
+    }
+
+    public RacingGame getRacingGame() {
+        return racingGame;
     }
 }

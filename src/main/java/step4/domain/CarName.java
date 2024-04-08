@@ -1,4 +1,4 @@
-package step3.domain;
+package step4.domain;
 
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public class CarName {
     }
 
     private void isEmpty(String name) {
-        if (Objects.isNull(name) || name.isEmpty()) {
+        if (Objects.isNull(name) || name.isBlank()) {
             throw new IllegalArgumentException("자동차의 이름은 1글자 이상 5글자 이하로 지정하여야 합니다.");
         }
     }

@@ -1,7 +1,6 @@
-package step3.domain;
+package step4.domain;
 
-import step3.domain.*;
-import step3.utils.RandomNumGenerator;
+import step4.utils.RandomNumGenerator;
 
 
 import java.util.ArrayList;
@@ -12,6 +11,9 @@ public class RacingGame {
     private final List<Car> cars;
     private int tryNo;
 
+    public RacingGame(String carNames) {
+        this.cars = initCars(carNames);
+    }
     public RacingGame(String carNames, int tryNo) {
         this.cars = initCars(carNames);
         this.tryNo = tryNo;
@@ -50,5 +52,9 @@ public class RacingGame {
 
     public List<Car> getWinners() {
         return null;
+    }
+
+    public int getTryNo() {
+        return tryNo;
     }
 }
