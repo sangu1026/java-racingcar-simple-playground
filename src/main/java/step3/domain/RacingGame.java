@@ -1,4 +1,4 @@
-package step3.controller;
+package step3.domain;
 
 import step3.domain.*;
 import step3.utils.RandomNumGenerator;
