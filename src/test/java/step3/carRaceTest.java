@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import step3.controller.RacingGame;
 import step3.domain.Car;
 import step3.domain.Winners;
-import step3.domain.RandomNumGenerator;
+import step3.utils.RandomNumGenerator;
 
 import java.util.ArrayList;
 import java.util.List;

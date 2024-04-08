@@ -1,6 +1,7 @@
 package step3.controller;
 
 import step3.domain.*;
+import step3.utils.RandomNumGenerator;
 
 
 import java.util.ArrayList;
