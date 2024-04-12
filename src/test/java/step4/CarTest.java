@@ -13,13 +13,13 @@ public class CarTest {
     void carMoveForward(int randomNum){
         //given
         Car car = new Car("brown");
-        int current_location = car.getPosition();
+        int currentLocation = car.getPosition();
 
         //when
         car.forwardCar(randomNum);
 
         //then
-        Assertions.assertThat(car.getPosition()).isEqualTo(current_location+1);
+        Assertions.assertThat(car.getPosition()).isEqualTo(currentLocation+1);
 
     }
 
@@ -29,13 +29,13 @@ public class CarTest {
     void carStop(int randomNum){
         //given
         Car car = new Car("brown");
-        int current_location = car.getPosition();
+        int currentLocation = car.getPosition();
 
         //when
         car.forwardCar(randomNum);
 
         //then
-        Assertions.assertThat(car.getPosition()).isEqualTo(current_location);
+        Assertions.assertThat(car.getPosition()).isEqualTo(currentLocation);
 
     }
 }

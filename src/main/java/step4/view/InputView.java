@@ -13,6 +13,16 @@ public class InputView {
 
     public static int getRaceCount(){
         System.out.println("시도할 회수는 몇회인가요?");
-        return scanner.nextInt();
+        return validateRaceCount(scanner.nextLine());
     }
+
+    private static int validateRaceCount(String raceCount) throws NumberFormatException {
+        try {
+            return Integer.parseInt(raceCount);
+        }catch (Exception e){
+            throw new NumberFormatException("시도할 횟수는 정수가 입력되아야 합니다.");
+        }
+    }
+
+
 }

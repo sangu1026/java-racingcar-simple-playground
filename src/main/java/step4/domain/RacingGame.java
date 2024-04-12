@@ -11,16 +11,12 @@ public class RacingGame {
     private final List<Car> cars;
     private int tryNo;
 
-    public RacingGame(String carNames) {
-        this.cars = initCars(carNames);
-    }
     public RacingGame(String carNames, int tryNo) {
         this.cars = initCars(carNames);
         this.tryNo = tryNo;
     }
 
-    private static List<Car> initCars(String carNames) {
-
+    private List<Car> initCars(String carNames) {
         String[] names = carNames.split(",");
         List<Car> cars = new ArrayList<>();
         for (String name : names) {
@@ -48,10 +44,6 @@ public class RacingGame {
     public List<Car> getCars() {
         Collections.unmodifiableList(cars);
         return cars;
-    }
-
-    public List<Car> getWinners() {
-        return null;
     }
 
     public int getTryNo() {

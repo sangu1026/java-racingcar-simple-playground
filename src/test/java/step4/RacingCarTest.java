@@ -2,19 +2,11 @@ package step4;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 import step4.controller.RacingCarController;
-import step4.domain.Car;
 import step4.domain.RacingGame;
-import step4.domain.Winners;
-import step4.utils.RandomNumGenerator;
 
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -27,9 +19,9 @@ public class RacingCarTest {
     @CsvSource({"'neo,brie,brown'"})
     void makeThreeCars(String name){
         //given,when
-        RacingGame racingGame = new RacingGame(name);
+        RacingGame racingGame = new RacingGame(name,5);
         //then
-        assertThat(racingGame.getCars().size()).isEqualTo(3);
+        assertThat(racingGame.getCars()).hasSize(3);
     }
 
     @ParameterizedTest

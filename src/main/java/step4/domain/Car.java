@@ -1,13 +1,11 @@
 package step4.domain;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Car {
     private static final int FORWARD_NUM = 4;
 
     private final CarName carName;
     private int position =0;
-    public Car(String name) throws IllegalArgumentException{
+    public Car(String name){
         carName= new CarName(name);
     }
 
@@ -23,7 +21,7 @@ public class Car {
     }
 
     public String getName() {
-        return carName.name();
+        return carName.getName();
     }
 
     public int getPosition() {

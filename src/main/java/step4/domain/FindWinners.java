@@ -3,7 +3,7 @@ package step4.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Winners {
+public class FindWinners {
     public static List<String> findWinners(List<Car> cars) {
         return findWinners(cars, maxPosition(cars));
     }
@@ -21,7 +21,7 @@ public class Winners {
     private static List<String> findWinners(List<Car> cars, int maxPosition) {
         List<String> winners = new ArrayList<>();
         for (Car car : cars) {
-            if (car.isWinner(maxPosition)){ // 변경.
+            if (car.isWinner(maxPosition)){
                 winners.add(car.getName());
             }
         }
